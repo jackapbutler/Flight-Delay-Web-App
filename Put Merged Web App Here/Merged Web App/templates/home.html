@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<title>Dublin Departure Delays App</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/w3.css">
+<link rel="stylesheet" href="static/css.css">
+<style>
+    body,
+    h1 {
+        font-family: "Raleway", sans-serif
+    }
+    
+    body,
+    html {
+        height: 100%
+    }
+    
+    .bgimg {
+        background-image: url('static/bg.png');
+        min-height: 100%;
+        background-position: center;
+        background-size: cover;
+    }
+</style>
+
+<body>
+
+    <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+        <div class="w3-display-topleft w3-padding-large w3-xlarge">
+            Dublin Departure Delays App
+        </div>
+        <div class="w3-display-middle">
+
+            <form action="/result" method="POST">
+                <table>
+                    <tr>
+                        <td align='right'>
+                            Select Origin: </td>
+                        <td>
+                            <select name="Origin">
+                                <option value="Dublin">Dublin</option>
+                            </select>
+                        </td>
+                        <tr>
+                            <td>
+                                Select Destination: </td>
+                            <td>
+                                <select name="Destination">
+                                    <option value="Aberdeen">Aberdeen</option>
+                                    <option value="Abu Dhabi">Abu Dhabi</option>
+                                    <option value="Agadir">Agadir</option>
+                                    <option value="Alicante">Alicante</option>
+                                    <option value="Almeria">Almeria</option>
+                                    <option value="Amsterdam">Amsterdam</option>
+                                    <option value="Athens">Athens</option>
+                                    <option value="Atlanta">Atlanta</option>
+                                    <option value="Bacau">Bacau</option>
+                                    <option value="Barcelona">Barcelona</option>
+                                    <option value="Bari">Bari</option>
+                                    <option value="Basel">Basel</option>
+                                    <option value="Beijing">Beijing</option>
+                                    <option value="Berlin">Berlin</option>
+                                    <option value="Biarritz">Biarritz</option>
+                                    <option value="Bilbao">Bilbao</option>
+                                    <option value="Birmingham">Birmingham</option>
+                                    <option value="Bodrum">Bodrum</option>
+                                    <option value="Bologna">Bologna</option>
+                                    <option value="Bordeaux">Bordeaux</option>
+                                    <option value="Boston">Boston</option>
+                                    <option value="Bourgas">Bourgas</option>
+                                    <option value="Bournemouth">Bournemouth</option>
+                                    <option value="Bratislava">Bratislava</option>
+                                    <option value="Bristol">Bristol</option>
+                                    <option value="Brussels">Brussels</option>
+                                    <option value="Brussels South">Brussels South Charleroi</option>
+                                    <option value="Bucharest">Bucharest</option>
+                                    <option value="Budapest">Budapest</option>
+                                    <option value="Bydgoszcz">Bydgoszcz</option>
+                                    <option value="CLJ">Cluj-Napoca</option>
+                                    <option value="Carcassonne">Carcassonne</option>
+                                    <option value="Cardiff">Cardiff</option>
+                                    <option value="Catania">Catania</option>
+                                    <option value="Chania-Souda">Chania-Souda</option>
+                                    <option value="Charlotte">Charlotte</option>
+                                    <option value="Chicago">Chicago</option>
+                                    <option value="Chisinau">Chisinau</option>
+                                    <option value="Cologne/Bonn">Cologne Bonn</option>
+                                    <option value="Copenhagen">Copenhagen</option>
+                                    <option value="Corfu">Corfu</option>
+                                    <option value="Dalaman">Dalaman</option>
+                                    <option value="Doha">Doha</option>
+                                    <option value="Doncaster">Doncaster</option>
+                                    <option value="Donegal">Donegal</option>
+                                    <option value="Dubai">Dubai</option>
+                                    <option value="Dubrovnik">Dubrovnik</option>
+                                    <option value="Dusseldorf">Dusseldorf</option>
+                                    <option value="East Midlands">East Midlands</option>
+                                    <option value="Edinburgh">Edinburgh</option>
+                                    <option value="Eindhoven">Eindhoven</option>
+                                    <option value="Exeter">Exeter</option>
+                                    <option value="Faro">Faro</option>
+                                    <option value="Frankfurt">Frankfurt</option>
+                                    <option value="Fuerteventura">Fuerteventura</option>
+                                    <option value="Gdansk">Gdansk</option>
+                                    <option value="Geneva">Geneva</option>
+                                    <option value="Girona">Girona</option>
+                                    <option value="Glasgow">Glasgow</option>
+                                    <option value="Goteborg">Goteborg</option>
+                                    <option value="Gran Canaria">Gran Canaria</option>
+                                    <option value="Halifax">Halifax</option>
+                                    <option value="Hamburg">Hamburg</option>
+                                    <option value="Hartford">Hartford</option>
+                                    <option value="Helsinki">Helsinki</option>
+                                    <option value="Heraklion">Heraklion</option>
+                                    <option value="Hong Kong">Hong Kong</option>
+                                    <option value="Ibiza">Ibiza</option>
+                                    <option value="Inverness">Inverness</option>
+                                    <option value="Isle Of Man">Isle Of Man</option>
+                                    <option value="Istanbul">Istanbul</option>
+                                    <option value="Izmir">Izmir</option>
+                                    <option value="Jersey">Jersey</option>
+                                    <option value="Katowice">Katowice</option>
+                                    <option value="Kaunas">Kaunas</option>
+                                    <option value="Keflavik">Keflavik</option>
+                                    <option value="Kerry">Kerry</option>
+                                    <option value="Kiev">Kiev</option>
+                                    <option value="Kos">Kos</option>
+                                    <option value="Krakow">Krakow</option>
+                                    <option value="La Rochelle">La Rochelle</option>
+                                    <option value="Lanzarote">Lanzarote</option>
+                                    <option value="Leeds Bradford">Leeds </option>
+                                    <option value="Lisbon">Lisbon</option>
+                                    <option value="Liverpool">Liverpool</option>
+                                    <option value="Lodz">Lodz</option>
+                                    <option value="London - LCY">London - LCY</option>
+                                    <option value="London - SEN">London - SEN</option>
+                                    <option value="London - LGW">London - LGW</option>
+                                    <option value="London - LHR">London - LHR</option>
+                                    <option value="London - LTN">London - LTN</option>
+                                    <option value="London - STN">London - STN</option>
+                                    <option value="Los Angeles">Los Angeles</option>
+                                    <option value="Lourdes">Lourdes</option>
+                                    <option value="Lublin">Lublin</option>
+                                    <option value="Luxembourg">Luxembourg</option>
+                                    <option value="Lyon-Saint Exupery">Lyon-Saint Exupery</option>
+                                    <option value="Madrid">Madrid</option>
+                                    <option value="Malaga">Malaga</option>
+                                    <option value="Malta">Malta</option>
+                                    <option value="Manchester">Manchester</option>
+                                    <option value="Marrakech">Marrakech</option>
+                                    <option value="Marseille">Marseille</option>
+                                    <option value="Memmingen">Memmingen</option>
+                                    <option value="Miami">Miami</option>
+                                    <option value="Milan">Milan</option>
+                                    <option value="Milan-BGY">Milan-BGY</option>
+                                    <option value="Montpellier">Montpellier</option>
+                                    <option value="Montreal">Montreal</option>
+                                    <option value="Moscow">Moscow</option>
+                                    <option value="Munich">Munich</option>
+                                    <option value="Nantes">Nantes</option>
+                                    <option value="Naples">Naples</option>
+                                    <option value="New York">New York</option>
+                                    <option value="Newark">Newark</option>
+                                    <option value="Newburgh">Newburgh</option>
+                                    <option value="Newcastle">Newcastle</option>
+                                    <option value="Newquay">Newquay</option>
+                                    <option value="Nice">Nice</option>
+                                    <option value="Orlando">Orlando</option>
+                                    <option value="Oslo">Oslo</option>
+                                    <option value="Palermo">Palermo</option>
+                                    <option value="Palma">Palma</option>
+                                    <option value="Paphos">Paphos</option>
+                                    <option value="Paris-BVA">Paris-BVA</option>
+                                    <option value="Paris-CDG">Paris-CDG</option>
+                                    <option value="Paris-Orly">Paris-Orly</option>
+                                    <option value="Perpignan">Perpignan</option>
+                                    <option value="Philadelphia">Philadelphia</option>
+                                    <option value="Pisa">Pisa</option>
+                                    <option value="Porto">Porto</option>
+                                    <option value="Poznan">Poznan</option>
+                                    <option value="Prague">Prague</option>
+                                    <option value="Providence">Providence</option>
+                                    <option value="Pula">Pula</option>
+                                    <option value="RMU">Murcia Corvera</option>
+                                    <option value="Rennes">Rennes</option>
+                                    <option value="Reus">Reus</option>
+                                    <option value="Rhodos">Rhodos</option>
+                                    <option value="Riga">Riga</option>
+                                    <option value="Rome">Rome</option>
+                                    <option value="Rzeszow">Rzeszow</option>
+                                    <option value="Salzburg">Salzburg</option>
+                                    <option value="San Francisco">San Francisco</option>
+                                    <option value="Santander">Santander</option>
+                                    <option value="Santiago">Santiago</option>
+                                    <option value="Seattle">Seattle</option>
+                                    <option value="Seville">Seville</option>
+                                    <option value="Shenzhen">Shenzhen</option>
+                                    <option value="Sofia">Sofia</option>
+                                    <option value="Southampton">Southampton</option>
+                                    <option value="Split">Split</option>
+                                    <option value="Stockholm">Stockholm</option>
+                                    <option value="Stuttgart">Stuttgart</option>
+                                    <option value="Szczecin">Szczecin</option>
+                                    <option value="Tallinn">Tallinn</option>
+                                    <option value="Tenerife">Tenerife</option>
+                                    <option value="Thessaloniki">Thessaloniki</option>
+                                    <option value="Toronto YHM">Toronto YHM</option>
+                                    <option value="Toronto YYZ">Toronto YYZ</option>
+                                    <option value="Toulouse">Toulouse</option>
+                                    <option value="Tours">Tours</option>
+                                    <option value="Valencia">Valencia</option>
+                                    <option value="Vancouver">Vancouver</option>
+                                    <option value="Venice">Venice</option>
+                                    <option value="Verona">Verona</option>
+                                    <option value="Vienna">Vienna</option>
+                                    <option value="Vilnius">Vilnius</option>
+                                    <option value="Warsaw">Warsaw</option>
+                                    <option value="Washington">Washington</option>
+                                    <option value="Wroclaw">Wroclaw</option>
+                                    <option value="Zadar">Zadar</option>
+                                    <option value="Zagreb">Zagreb</option>
+                                    <option value="Zakinthos">Zakynthos</option>
+                                    <option value="Zurich">Zurich</option>
+                                </select>
+                            </td>
+                        </tr>
+                </table>
+                </p>
+
+                <p> Select Airline :
+                    <select name="Airline">
+                        <option value="3O">3O </option>
+                        <option value="Aegean Airlines">Aegean Airlines </option>
+                        <option value="Aer Lingus">Aer Lingus </option>
+                        <option value="Aeroflot">Aeroflot </option>
+                        <option value="Air Baltic">Air Baltic </option>
+                        <option value="Air Canada Aca">Air Canada</option>
+                        <option value="Air France">Air France </option>
+                        <option value="Air Transat">Air Transat </option>
+                        <option value="Albastar">Albastar </option>
+                        <option value="American Airlines">American Airlines</option>
+                        <option value="Blue Air">Blue Air </option>
+                        <option value="British Airways">British Airways </option>
+                        <option value="Cathay Pacific">Cathay Pacific </option>
+                        <option value="Cityjet">Cityjet</option>
+                        <option value="Croatia Airlines">Croatia Airlines </option>
+                        <option value="Delta Air Lines">Delta Air Lines </option>
+                        <option value="Emirates">Emirates </option>
+                        <option value="Ent">Ent </option>
+                        <option value="Ethiopian Airlines">Ethiopian Airlines </option>
+                        <option value="Etihad Airways">Etihad Airways </option>
+                        <option value="Eurowings">Eurowings </option>
+                        <option value="Fia">Fia </option>
+                        <option value="Finnair Oy">Finnair Oy </option>
+                        <option value="Flybe">Flybe </option>
+                        <option value="Hainan Airlines">Hainan Airlines </option>
+                        <option value="Iberia Express">Iberia Express </option>
+                        <option value="Icelandair">Icelandair </option>
+                        <option value="Klm">Klm </option>
+                        <option value="Laudamotion">Laudamotion </option>
+                        <option value="Loganair">Loganair </option>
+                        <option value="Lufthansa">Lufthansa </option>
+                        <option value="Luxair">Luxair </option>
+                        <option value="Norwegian">Norwegian </option>
+                        <option value="Qatar Airways">Qatar Airways </option>
+                        <option value="Ryanair">Ryanair </option>
+                        <option value="Sas">Sas </option>
+                        <option value="Flybe">Flybe </option>
+                        <option value="Sas">Sas </option>
+                        <option value="Sunexpress Sxs">Sunexpress </option>
+                        <option value="Swiss">Swiss </option>
+                        <option value="Tap - Air Portugal">Tap - Air Portugal </option>
+                        <option value="Transavia">Transavia </option>
+                        <option value="Tui">Tui </option>
+                        <option value="Turkish Airlines">Turkish Airlines </option>
+                        <option value="United Airlines">United Airlines </option>
+                        <option value="Vueling">Vueling </option>
+                    </select>
+                </p>
+
+                <p> Select Terminal :
+                    <select name="Terminal">
+                        <option value="T1" selected>Terminal 1</option>
+                        <option value="T2">Terminal 2</option>
+                    </select>
+                </p>
+
+                <p> Select Day of Week :
+                    <select name="Weekday">
+                        <option value="Monday" selected>Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        <option value="Saturday">Saturday</option>
+                        <option value="Sunday">Sunday</option>
+                    </select>
+                </p>
+
+                <p> Select Departure HOUR:
+                    <select name="Scheduled Time">
+                        <option value=0>00:00</option>
+                        <option value=1>01:00</option>
+                        <option value=2>02:00</option>
+                        <option value=3>03:00</option>
+                        <option value=4>04:00</option>
+                        <option value=5>05:00</option>
+                        <option value=6>06:00</option>
+                        <option value=7>07:00</option>
+                        <option value=8>08:00</option>
+                        <option value=9>09:00</option>
+                        <option value=10 selected>10:00</option>
+                        <option value=11>11:00</option>
+                        <option value=12>12:00</option>
+                        <option value=13>13:00</option>
+                        <option value=14>14:00</option>
+                        <option value=15>15:00</option>
+                        <option value=16>16:00</option>
+                        <option value=17>17:00</option>
+                        <option value=18>18:00</option>
+                        <option value=19>19:00</option>
+                        <option value=20>20:00</option>
+                        <option value=21>21:00</option>
+                        <option value=22>22:00</option>
+                        <option value=23>23:00</option>
+                    </select>
+                </p>
+
+                <p>
+                    <input type="submit" value="submit" /> </p>
+            </form>
+
+        </div>
+        <div class="w3-display-bottomleft w3-padding-large">
+            <a href="https://www.dublinairport.com/flight-information/new-destinations-and-services" target="_blank">Check for new Routes and Destinations</a>
+        </div>
+        <div class="w3-display-bottomright w3-padding-large">
+            <a href="https://www.linkedin.com/in/jackbutler-a/" target="_blank">LinkedIn</a>
+        </div>
+        <div class="w3-display-bottommiddle w3-padding-large">
+            Email: jackapbutler@gmail.com</a>
+        </div>
+        <div class="w3-display-topright w3-padding-large">
+            <a href="https://github.com/jackapbutler" target="_blank">Github</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

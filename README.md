@@ -1,5 +1,5 @@
 # Flight_Delay_Web_App
-Machine learning app using web-scraped data http://jackapbutler123.pythonanywhere.com/
+See Final Product here: http://jackapbutler123.pythonanywhere.com/
 
 1. The data was collected using python (mainly pandas) webscraping tools. 
 
@@ -13,4 +13,4 @@ Machine learning app using web-scraped data http://jackapbutler123.pythonanywher
 
 6. Multiple machine learning models were trained on different response variables before the most efficient & accurate solution was chosen.
 
-7. This model was then deployed as a web application through Flask and pythonanywhere using HTML and CSS to create the webpages.
+7. This model was then deployed as a web application through Flask and pythonanywhere using HTML and CSS to create the webpage designs.

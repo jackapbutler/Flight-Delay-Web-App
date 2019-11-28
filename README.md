@@ -1,4 +1,4 @@
-# Flight_Delay_Web_App
+# Flight Delay Web App
 See Final Product here: http://jackapbutler123.pythonanywhere.com/
 
 1. The data was collected using python (mainly pandas) webscraping tools. 

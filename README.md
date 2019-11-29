@@ -14,3 +14,7 @@ See Final Product here: http://jackapbutler123.pythonanywhere.com/
 6. Multiple machine learning models were trained on different response variables before the most efficient & accurate solution was chosen.
 
 7. This model was then deployed as a web application through Flask and pythonanywhere using HTML and CSS to create the webpage designs.
+
+# Web App Landing Page
+
+![Image of framework](https://github.com/jackapbutler/Flight-Delay-Web-App/blob/master/flightdelay.PNG)

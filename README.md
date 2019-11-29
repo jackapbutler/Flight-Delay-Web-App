@@ -15,6 +15,6 @@ See Final Product here: http://jackapbutler123.pythonanywhere.com/
 
 7. This model was then deployed as a web application through Flask and pythonanywhere using HTML and CSS to create the webpage designs.
 
-# Web App Landing Page
+# Landing Page
 
 ![Image of framework](https://github.com/jackapbutler/Flight-Delay-Web-App/blob/master/flightdelay.PNG)

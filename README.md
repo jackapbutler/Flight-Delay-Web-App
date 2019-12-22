@@ -22,3 +22,4 @@ See Final Product here: http://jackapbutler123.pythonanywhere.com/
 # Result Page
 
 ![Image of framework](https://github.com/jackapbutler/Flight-Delay-Web-App/blob/master/flightresult.PNG)
+![Image of framework](https://github.com/jackapbutler/Flight-Delay-Web-App/blob/master/moreresults.PNG)

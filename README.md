@@ -18,3 +18,7 @@ See Final Product here: http://jackapbutler123.pythonanywhere.com/
 # Landing Page
 
 ![Image of framework](https://github.com/jackapbutler/Flight-Delay-Web-App/blob/master/flightdelay.PNG)
+
+# Result Page
+
+![Image of framework](https://github.com/jackapbutler/Flight-Delay-Web-App/blob/master/flightresult.PNG)
